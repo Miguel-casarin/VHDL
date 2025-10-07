@@ -1,0 +1,43 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity full_adder is
+    port(
+        a, b, cin : in std_logic; -- entradas 
+        s, cout : out std_logic -- saidas
+    );
+end full_adder;
+
+architecture fa of full_adder is 
+-- xor
+component rca -- declarei como rca pq ele foi o primeiro arquivo 
+    port(a, b : in std_logic;
+         y : out std_logic);
+end component;
+
+--and
+component rca_and
+    port(a, b : in std_logic;
+         y : out std_logic);
+end component; 
+
+-- or
+component rca_or
+    port(a, b : in std_logic;
+         y : out std_logic);
+end component;
+
+signal s1, c1, c2 : std_logic;
+
+begin
+xor1 : rca port map(a => a, b => b, y => s1);
+
+xor2 : rca port map(a => a, b => cin, y => s);
+
+and1 : rca_and port map(a => a, b => b, y => c1);
+
+and2 : rca_and port map(a => s1, b => cin, y => c2);
+
+or1 : rca_or port map(a => c1, b => c2, y => cout)
+
+end fa;

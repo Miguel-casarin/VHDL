@@ -1,0 +1,15 @@
+|segmento_f
+i_a => o_saida_F.IN0
+i_a => o_saida_F.IN0
+i_a => o_saida_F.IN0
+i_b => o_saida_F.IN1
+i_b => o_saida_F.IN1
+i_c => o_saida_F.IN1
+i_c => o_saida_F.IN1
+i_c => o_saida_F.IN1
+i_d => o_saida_F.IN1
+i_d => o_saida_F.IN1
+i_d => o_saida_F.IN1
+o_saida_F <= o_saida_F.DB_MAX_OUTPUT_PORT_TYPE
+
+

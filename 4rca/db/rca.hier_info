@@ -1,0 +1,181 @@
+|rca
+a[0] => fa:full_adder_1.a
+a[1] => fa:full_adder_2.a
+a[2] => fa:full_adder_3.a
+a[3] => fa:full_adder_4.a
+b[0] => fa:full_adder_1.b
+b[1] => fa:full_adder_2.b
+b[2] => fa:full_adder_3.b
+b[3] => fa:full_adder_4.b
+cin => fa:full_adder_1.cin
+s[0] <= fa:full_adder_1.s
+s[1] <= fa:full_adder_2.s
+s[2] <= fa:full_adder_3.s
+s[3] <= fa:full_adder_4.s
+cout <= fa:full_adder_4.cout
+
+
+|rca|fa:full_adder_1
+a => rca_xor:xor1.a
+a => rca_and:and1.a
+b => rca_xor:xor1.b
+b => rca_and:and1.b
+cin => rca_xor:xor2.b
+cin => rca_and:and2.b
+s <= rca_xor:xor2.y
+cout <= rca_or:or1.y
+
+
+|rca|fa:full_adder_1|rca_xor:xor1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_1|rca_xor:xor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_1|rca_and:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_1|rca_and:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_1|rca_or:or1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_2
+a => rca_xor:xor1.a
+a => rca_and:and1.a
+b => rca_xor:xor1.b
+b => rca_and:and1.b
+cin => rca_xor:xor2.b
+cin => rca_and:and2.b
+s <= rca_xor:xor2.y
+cout <= rca_or:or1.y
+
+
+|rca|fa:full_adder_2|rca_xor:xor1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_2|rca_xor:xor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_2|rca_and:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_2|rca_and:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_2|rca_or:or1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_3
+a => rca_xor:xor1.a
+a => rca_and:and1.a
+b => rca_xor:xor1.b
+b => rca_and:and1.b
+cin => rca_xor:xor2.b
+cin => rca_and:and2.b
+s <= rca_xor:xor2.y
+cout <= rca_or:or1.y
+
+
+|rca|fa:full_adder_3|rca_xor:xor1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_3|rca_xor:xor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_3|rca_and:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_3|rca_and:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_3|rca_or:or1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_4
+a => rca_xor:xor1.a
+a => rca_and:and1.a
+b => rca_xor:xor1.b
+b => rca_and:and1.b
+cin => rca_xor:xor2.b
+cin => rca_and:and2.b
+s <= rca_xor:xor2.y
+cout <= rca_or:or1.y
+
+
+|rca|fa:full_adder_4|rca_xor:xor1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_4|rca_xor:xor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_4|rca_and:and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_4|rca_and:and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca|fa:full_adder_4|rca_or:or1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
